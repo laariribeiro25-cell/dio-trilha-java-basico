@@ -17,6 +17,10 @@ System.out.println("Depois do pós --: " + numero);
 
 System.out.println("Pré-decremento: " + --numero);
 System.out.println("Depois do pré --: " + numero);
+
+int totalPaes = 5;
+String status = (totalPaes > 0) ? "Em estoque" : "Sem estoque";
+System.out.println(status);
 }
     
 }
