@@ -13,5 +13,24 @@ System.out.println("Tanque: " + carro.getCapacidadeTanque() + " litros");
 
 double total = carro.calcularValorParaEncher(6.00);
 System.out.println("Total para encher o tanque: R$ " + total);
-    }
+  
+Funcionario[] equipe = {
+    new Gerente(),
+    new Vendedor(),
+    new Faxineiro()
+};
+
+for (Funcionario funcionario : equipe) {
+    funcionario.trabalhar();
+}
+Departamento ti = new Departamento();
+ti.setNome("Tecnologia");
+
+Funcionario funcionario = new Gerente();
+funcionario.setDepartamento(ti);
+
+System.out.println(funcionario.getDepartamento().getNome());
+}
+
+
 }
