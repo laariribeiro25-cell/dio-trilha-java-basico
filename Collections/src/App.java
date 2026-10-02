@@ -1,21 +1,17 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+
+import java.util.Arrays;
+import java.util.List;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
        
-     Map<Integer, Integer> resultados = new HashMap<>();
-Random dado = new Random();
-
-for (int lancamento = 0; lancamento < 100; lancamento++) {
-    int valor = dado.nextInt(6) + 1;
-
-    resultados.put(valor, resultados.getOrDefault(valor, 0) + 1);
-}
-for (Map.Entry<Integer, Integer> entrada : resultados.entrySet()) {
-    System.out.println("Face " + entrada.getKey() + ": " + entrada.getValue() + " vez(es)");
-}
-
+List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6);
+numeros.stream()
+       
+        .filter(numero -> numero % 2 == 0)
+        .map(numero -> numero * 2)
+        .forEach(System.out::println);
     }
 }
+
